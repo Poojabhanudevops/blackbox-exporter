@@ -67,19 +67,20 @@ It **cannot verify business functionality.**
 
 ---
 
-### Limitation 2 – Blind to Business Logic
+## Limitation 2 – Blind to Business Logic
 
 Consider the following login API response:
 
-```json
+```
 {
-  "success": false,
-  "error": "Invalid credentials"
+"success": false,
+"error": "Invalid credentials"
 }
+```
 
-HTTP 200 is returned, so Blackbox will report it as **UP**.
+HTTP 200 is returned, so Blackbox will report it as **UP**.  
 
-But the **real SLA is impacted** — users cannot log in.
+But the **real SLA is impacted** — users cannot log in.  
 
 → Blackbox monitors **infrastructure-level availability**, not business-level functionality.
 
@@ -90,7 +91,7 @@ But the **real SLA is impacted** — users cannot log in.
 Blackbox alone cannot fully cover SLA/SLO monitoring where business logic is involved.
 
 | Feature                                       | Blackbox Exporter |
-|-----------------------------------------------|-------------------|
+| --------------------------------------------- | ----------------- |
 | Checks availability                           | ✅                |
 | Checks response time                          | ✅                |
 | Validates business logic (e.g. login success) | ❌                |
@@ -103,3 +104,5 @@ Blackbox alone cannot fully cover SLA/SLO monitoring where business logic is inv
 ## Conclusion
 
 The Blackbox Exporter is great for monitoring **infrastructure-level availability** but is insufficient for measuring **functional SLAs** like login success.
+
+
