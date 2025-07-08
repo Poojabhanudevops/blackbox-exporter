@@ -34,14 +34,6 @@ Blackbox Exporter might probe your URL `https://grafana.k8s.opstree.dev` every 3
 
 - Useful as a “heartbeat” check to confirm services are reachable.
 
-✅ **Lightweight**
-
-- Does not require invasive installations inside services.
-
-✅ **Easy integration**
-
-- Fits well into the Prometheus and Grafana ecosystem.
-
 ---
 
 ## Limitations of Blackbox Exporter
